@@ -118,7 +118,7 @@ button {
 .intro p {
   width: 340px;
   margin: 18px 0 0;
-  color: var(--muted);
+  color: var(--text);
   font-size: 17px;
   font-weight: 500;
   line-height: 1.5;
