@@ -1,13 +1,16 @@
 :root {
-  --background: #191f28;
-  --text: #ffffff;
-  --muted: #b0b8c1;
-  --footer-muted: #6b7684;
-  --blue: #2b9beb;
-  --teal: #00aaaa;
-  --slate: #3e566c;
-  --navy: #364d9d;
-  --gray: #565557;
+  --background: #ffffff;
+  --surface: #fafaf8;
+  --text: #111111;
+  --muted: #6b7280;
+  --footer-muted: #9ca3af;
+  --border: #ececea;
+  --accent: #0034ff;
+  --card-1: #f0ece2;
+  --card-2: #e8efe9;
+  --card-3: #eaeef3;
+  --card-4: #ede9f0;
+  --card-5: #f6f1e6;
 }
 
 * {
@@ -47,6 +50,7 @@ button {
   z-index: 120;
   height: 58px;
   background: var(--background);
+  border-bottom: 1px solid var(--border);
 }
 
 .nav-shell {
@@ -75,11 +79,11 @@ button {
   display: inline-block;
   width: 1px;
   height: 18px;
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(0, 0, 0, 0.18);
 }
 
 .brand-title {
-  color: #fff;
+  color: var(--text);
   font-size: 15px;
   font-weight: 600;
   line-height: 1;
@@ -131,8 +135,8 @@ button {
   margin-top: 24px;
   padding: 18px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--border);
 }
 
 .submit-field {
@@ -145,9 +149,9 @@ button {
   min-height: 92px;
   padding: 12px 14px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(0, 0, 0, 0.25);
-  color: #fff;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text);
   font: inherit;
   font-size: 15px;
   font-weight: 500;
@@ -160,13 +164,13 @@ button {
 }
 
 .submit-field textarea::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: #9ca3af;
 }
 
 .submit-field textarea:focus {
   outline: none;
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(43, 155, 235, 0.25);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 52, 255, 0.15);
 }
 
 .submit-footer {
@@ -185,19 +189,19 @@ button {
 }
 
 .char-counter.is-near {
-  color: #ffc25c;
+  color: #d97706;
 }
 
 .char-counter.is-limit {
-  color: #ff6f6f;
+  color: #dc2626;
 }
 
 .submit-button {
   padding: 10px 20px;
   border-radius: 999px;
   border: 0;
-  background: var(--blue);
-  color: #fff;
+  background: var(--text);
+  color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
@@ -207,13 +211,13 @@ button {
 }
 
 .submit-button:hover:not(:disabled) {
-  background: #1e8acc;
+  background: var(--accent);
 }
 
 .submit-button:disabled {
-  background: #3e566c;
+  background: #d1d5db;
+  color: #6b7280;
   cursor: not-allowed;
-  opacity: 0.7;
 }
 
 .submit-form .submit-hint {
@@ -252,10 +256,10 @@ button {
   z-index: 15;
   display: block;
   width: 100%;
-  height: 60px;
+  height: 40px;
   pointer-events: none;
   content: "";
-  background: linear-gradient(180deg, #191f28 0%, rgba(25, 31, 40, 0) 100%);
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .stream {
@@ -281,8 +285,7 @@ button {
   min-height: 100px;
   padding: 16px 20px;
   border-radius: 8px;
-  background: var(--card-color, var(--gray));
-  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.25);
+  background: var(--card-color, var(--card-1));
   overflow: hidden;
   opacity: 0;
   transform: translate3d(0, 18px, 0);
@@ -301,7 +304,7 @@ button {
   align-items: center;
   height: 22px;
   margin-bottom: 10px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(17, 17, 17, 0.5);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
@@ -323,7 +326,7 @@ button {
 
 .moment-card p {
   margin: 4px 0 0;
-  color: #fff;
+  color: var(--text);
   font-size: 15px;
   font-weight: 700;
   line-height: 1.5;
@@ -335,8 +338,8 @@ button {
 .footer {
   padding: 50px 0 80px;
   margin-top: 100px;
-  background: #191f28;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--background);
+  border-top: 1px solid var(--border);
 }
 
 .footer-inner {
@@ -372,7 +375,7 @@ button {
 .footer-info {
   grid-column: 1;
   margin: 0;
-  color: #8b95a1;
+  color: var(--footer-muted);
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -383,7 +386,7 @@ button {
 .footer-info strong {
   display: block;
   padding-bottom: 6px;
-  color: var(--muted);
+  color: var(--text);
   font-size: 14px;
   font-weight: 700;
 }
