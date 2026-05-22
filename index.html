@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#191f28" />
+    <title>금융이 불편한 순간</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191f28'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-family='Pretendard, sans-serif' font-size='34' font-weight='800' fill='%232b9beb' dominant-baseline='middle'%3E?%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="주요 메뉴">
+        <a class="brand" href="#top" aria-label="처음으로">
+          <img src="./logo-havehad.png" alt="havehad" />
+        </a>
+      </nav>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="intro" aria-labelledby="main-title">
+        <div class="intro-copy">
+          <h1 id="main-title">금융이 불편할 때,<br />언제였나요?</h1>
+          <p>
+            여러분이 겪은 금융의 불편한 순간을 익명으로 남겨주세요.
+            꼼꼼히 읽고 더 나은 서비스를 만드는 데 반영할게요.
+          </p>
+          <form id="momentForm" class="submit-form" novalidate>
+            <label class="submit-field" for="momentInput">
+              <span class="visually-hidden">불편했던 금융 경험</span>
+              <textarea
+                id="momentInput"
+                name="comment"
+                placeholder="예: 카드 실적이 얼마나 채워졌는지 한눈에 보고 싶어요."
+                maxlength="300"
+                rows="4"
+                required
+              ></textarea>
+            </label>
+            <div class="submit-footer">
+              <span class="char-counter" aria-live="polite">
+                <span id="charCount">0</span>
+                <span class="char-counter-sep">/</span>
+                <span class="char-counter-max">300</span>
+              </span>
+              <button type="submit" class="submit-button" id="submitButton" disabled>
+                남기기
+              </button>
+            </div>
+            <p class="submit-hint">이름·연락처는 받지 않아요. 누구나 익명으로 남길 수 있어요.</p>
+          </form>
+        </div>
+      </section>
+
+      <section id="top20" class="moments" aria-label="불편했던 금융 경험 목록">
+        <div class="stream" id="momentStream" aria-live="polite"></div>
+        <div class="stream-loader" id="streamLoader" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-columns">
+          <ul>
+            <li class="footer-title">서비스</li>
+            <li>공지사항</li>
+            <li>자주 묻는 질문</li>
+            <li>공동인증서 관리</li>
+            <li>계정 일시잠금</li>
+            <li>고객보호센터</li>
+          </ul>
+          <ul>
+            <li class="footer-title">회사</li>
+            <li>회사 소개</li>
+            <li>토스페이먼츠</li>
+            <li>토스인슈어런스</li>
+            <li>채용</li>
+            <li>블로그</li>
+          </ul>
+          <ul>
+            <li class="footer-title">문의</li>
+            <li>사업 제휴</li>
+            <li>인증 사업 문의</li>
+            <li>마케팅 · PR</li>
+            <li>IR</li>
+          </ul>
+          <ul>
+            <li class="footer-title">고객센터</li>
+            <li>전화: 1599-4905</li>
+            <li>이메일: support@toss.im</li>
+            <li>카카오톡: @toss</li>
+          </ul>
+        </div>
+        <address>
+          <strong>(주)비바리퍼블리카</strong><br />
+          사업자 등록번호 : 120-88-01280 | 대표 : 이승건<br />
+          06236 서울특별시 강남구 테헤란로 142, 12층 (역삼동, 아크플레이스)
+        </address>
+        <div class="policy-links">
+          <span>서비스 이용약관</span>
+          <span>통합 금융정보 서비스 약관</span>
+          <span>이용자의 권리 및 유의사항</span>
+          <span>개인정보 처리방침</span>
+          <span>위치기반서비스 이용약관</span>
+          <span>가맹점 고지사항</span>
+        </div>
+        <div class="socials" aria-label="소셜 링크">
+          <span><img src="https://static.toss.im/assets/homepage/safety/icn-facebook.svg" alt="" /></span>
+          <span><img src="https://static.toss.im/assets/homepage/safety/icn-blog.svg" alt="" /></span>
+          <span><img src="https://static.toss.im/assets/homepage/safety/icn-naver.svg" alt="" /></span>
+          <span><img src="https://static.toss.im/assets/homepage/safety/icn-twitter.svg" alt="" /></span>
+          <span><img src="https://static.toss.im/assets/homepage/safety/icn-instagram.svg" alt="" /></span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
