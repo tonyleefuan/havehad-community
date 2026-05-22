@@ -164,8 +164,8 @@ button {
 
 .submit-field textarea:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(43, 155, 235, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
 }
 
 .submit-footer {
@@ -195,8 +195,8 @@ button {
   padding: 10px 20px;
   border-radius: 999px;
   border: 0;
-  background: var(--accent);
-  color: #fff;
+  background: #ffffff;
+  color: #0a0a0a;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
@@ -206,13 +206,13 @@ button {
 }
 
 .submit-button:hover:not(:disabled) {
-  background: #1e8acc;
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .submit-button:disabled {
-  background: #3e566c;
+  background: rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.4);
   cursor: not-allowed;
-  opacity: 0.7;
 }
 
 .submit-form .submit-hint {
