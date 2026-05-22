@@ -2,8 +2,8 @@
   --background: #0a0a0a;
   --surface: rgba(255, 255, 255, 0.04);
   --text: #ffffff;
-  --muted: #b0b8c1;
-  --footer-muted: #6b7684;
+  --muted: #b3b3b3;
+  --footer-muted: #808080;
   --border: rgba(255, 255, 255, 0.08);
   --accent: #2b9beb;
   --gray: #565557;
@@ -371,7 +371,7 @@ button {
 .footer-info {
   grid-column: 1;
   margin: 0;
-  color: #8b95a1;
+  color: #909090;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;

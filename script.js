@@ -3,11 +3,11 @@ const COMMENT_WARN_THRESHOLD = 250;
 const USER_SUBMISSIONS_KEY = "havehad-community:user-submissions";
 
 const colorByEmoji = {
-  "✨": "#1f1f1f",
-  "💡": "#2c2c2c",
-  "👕": "#3a3a3a",
-  "💭": "#4a4a4a",
-  "💛": "#5a5a5a",
+  "✨": "#2B9BEB",
+  "💡": "#00AAAA",
+  "👕": "#3E566C",
+  "💭": "#364D9D",
+  "💛": "#565557",
 };
 
 const seedIdeas = [
@@ -140,7 +140,7 @@ function getColumnCount() {
 
 function createCard(card) {
   const item = document.createElement("article");
-  const color = colorByEmoji[card.emoji] ?? "#3a3a3a";
+  const color = colorByEmoji[card.emoji] ?? "#565557";
   const isUserCard = typeof card.id === "string" && card.id.startsWith("me-");
 
   item.className = "moment-card";
