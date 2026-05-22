@@ -99,9 +99,8 @@ button {
   top: 58px;
   flex: 0 0 370px;
   align-self: flex-start;
-  min-height: calc(100vh - 58px);
   margin-right: 15px;
-  padding: 60px 0 80px;
+  padding: 60px 0 40px;
 }
 
 .intro-copy {
