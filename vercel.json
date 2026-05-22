@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/v3/:path*",
-      "destination": "https://api-public.toss.im/api/v3/:path*"
-    }
-  ]
-}
